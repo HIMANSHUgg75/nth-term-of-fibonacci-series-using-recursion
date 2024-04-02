@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h> // for abs function
+
+// Function to calculate the sum of absolute differences
+int calculate_absolute_difference_sum(int arr[], int n) {
+    int abs_diff_sum = 0;
+    for (int i = 0; i < n - 1; i++) {
+        abs_diff_sum += abs(arr[i] - arr[i+1]);
+    }
+    return abs_diff_sum;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n); // Reading input size of array
+
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]); // Reading elements of the array
+    }
+
+    // Calculating sum of absolute differences
+    int result = calculate_absolute_difference_sum(arr, n);
+
+    // Printing the result
+    printf("%d\n", result);
+    
+    return 0;
+}
