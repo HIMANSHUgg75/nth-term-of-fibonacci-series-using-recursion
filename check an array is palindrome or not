@@ -1,0 +1,36 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int  palindrome(int arr[], int n){
+    
+    for(int i=0; i<n/2; i++){
+        if (arr[i] != arr[n-i-1]){
+            return 0;
+        }
+    }
+        return 1;
+    
+   
+        // int temp = arr[i];
+        // arr[i] = arr[j] ;
+        // arr[j] = temp;
+}
+
+int main() {
+    int arr[7] = {1,2,3,4,3,2,1};
+    
+    int n = sizeof(arr) / sizeof(arr[0]) ;
+    
+    
+    if (palindrome(arr , n)){
+        printf("yes its a palindrome");
+    }
+    else 
+    {
+        printf("ita not a palindrome");
+    
+    }
+    
+
+    return 0;
+}
